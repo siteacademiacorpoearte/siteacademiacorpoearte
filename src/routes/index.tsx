@@ -48,7 +48,7 @@ function Index() {
       <header className="fixed inset-x-0 top-0 z-50 border-b border-border/50 bg-background/80 backdrop-blur">
         <div className="mx-auto flex max-w-6xl items-center justify-between px-5 py-3">
           <a href="#" className="flex items-center gap-3">
-            <img src="/uploads/1794117136891-0-images-10-.jpg" alt="Corpo e Arte Logo" className="h-12 w-12 rounded-full object-cover border border-primary/40 shadow-md" />
+            <img src="/uploads/1794117136891-0-images-10-.jpg" alt="Corpo e Arte Logo" className="h-36 w-36 rounded-full object-cover border border-primary/40 shadow-md" />
             <div className="flex flex-col">
               <span className="font-display text-xl tracking-wide leading-none">CORPO<span className="text-primary">E</span>ARTE</span>
               <span className="text-[10px] uppercase font-semibold text-muted-foreground tracking-wider mt-0.5">Academia Fitness</span>
@@ -142,7 +142,7 @@ function Index() {
       <footer className="border-t border-border py-10">
         <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-4 px-5 text-sm text-muted-foreground md:flex-row">
           <div className="flex items-center gap-3">
-            <img src="/uploads/1794117136891-0-images-10-.jpg" alt="Corpo e Arte Logo" className="h-10 w-10 rounded-full object-cover border border-primary/30" />
+            <img src="/uploads/1794117136891-0-images-10-.jpg" alt="Corpo e Arte Logo" className="h-30 w-30 rounded-full object-cover border border-primary/30" />
             <div className="flex flex-col">
               <span className="font-display text-lg text-foreground leading-none">CORPO<span className="text-primary">E</span>ARTE</span>
               <span className="text-[9px] uppercase font-semibold text-muted-foreground tracking-wider mt-0.5">Academia Fitness</span>
