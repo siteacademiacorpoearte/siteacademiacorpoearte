@@ -94,30 +94,30 @@ function Index() {
         </div>
       </header>
 
-      <section className="relative flex min-h-[90vh] items-center overflow-hidden">
+      <section className="relative flex min-h-[85vh] md:min-h-[90vh] items-center overflow-hidden pt-20 md:pt-0">
         <div className="absolute inset-0 w-full h-full">
           <Carousel opts={{ loop: true }} plugins={[Autoplay({ delay: 5000, stopOnInteraction: false })]} className="w-full h-full">
-            <CarouselContent className="h-[90vh] ml-0">
+            <CarouselContent className="h-[85vh] md:h-[90vh] ml-0">
               {proAthletes.slice(0, 8).map((athlete, index) => (
                 <CarouselItem key={index} className="relative h-full w-full pl-0">
-                  <img src={athlete.img} alt={athlete.name} className="absolute inset-0 h-full w-full object-cover" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-background via-background/60 to-transparent" />
+                  <img src={athlete.img} alt={athlete.name} className="absolute inset-0 h-full w-full object-cover object-center" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-background via-background/70 md:via-background/60 to-transparent" />
                   <div className="absolute bottom-0 inset-x-0">
-                    <div className="mx-auto w-full max-w-6xl px-5 pb-20">
-                      <span className="inline-block rounded-full bg-primary/20 px-3 py-1 text-xs font-semibold text-primary mb-3 backdrop-blur-md">
+                    <div className="mx-auto w-full max-w-6xl px-5 pb-12 md:pb-20">
+                      <span className="inline-block rounded-full bg-primary/20 px-3 py-1 text-xs font-semibold text-primary mb-2 md:mb-3 backdrop-blur-md">
                         {athlete.role}
                       </span>
-                      <h1 className="font-display text-6xl leading-none md:text-8xl">
+                      <h1 className="font-display text-4xl sm:text-5xl leading-tight md:text-8xl md:leading-none">
                         {athlete.name}
                       </h1>
-                      <p className="mt-3 max-w-md text-lg text-muted-foreground">
+                      <p className="mt-2 md:mt-3 max-w-md text-sm md:text-lg text-muted-foreground">
                         {athlete.desc}
                       </p>
-                      <div className="mt-6 flex items-center gap-4">
-                        <a href="#planos" className="inline-block rounded-full bg-primary px-8 py-4 font-semibold text-primary-foreground">
+                      <div className="mt-5 md:mt-6 flex flex-col sm:flex-row items-stretch sm:items-center gap-3 md:gap-4">
+                        <a href="#planos" className="inline-block rounded-full bg-primary px-6 md:px-8 py-3.5 md:py-4 text-center font-semibold text-primary-foreground text-sm md:text-base">
                           Ver planos
                         </a>
-                        <a href="#modalidades" className="inline-block rounded-full border border-border bg-card/60 backdrop-blur px-8 py-4 font-semibold text-foreground hover:border-primary">
+                        <a href="#modalidades" className="inline-block rounded-full border border-border bg-card/60 backdrop-blur px-6 md:px-8 py-3.5 md:py-4 text-center font-semibold text-foreground text-sm md:text-base hover:border-primary">
                           Nossas modalidades
                         </a>
                       </div>
