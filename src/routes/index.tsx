@@ -57,7 +57,7 @@ const units = [
 ];
 
 const storeProducts = [
-  { id: 1, name: "Whey Protein Isolado 900g", category: "Suplemento", price: "149,90", img: "https://images.unsplash.com/photo-1579722820308-d74e57170ca9?auto=format&fit=crop&w=600&q=80", desc: "Proteína de alta pureza para ganho de massa muscular e recuperação." },
+  { id: 1, name: "Whey Protein Isolado 900g", category: "Suplemento", price: "149,90", img: "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&w=600&q=80", desc: "Proteína de alta pureza para ganho de massa muscular e recuperação." },
   { id: 2, name: "Squeeze Térmico Aço Inox 750ml", category: "Acessório", price: "59,90", img: "https://images.unsplash.com/photo-1602143407151-7111542de6e8?auto=format&fit=crop&w=600&q=80", desc: "Mantém sua água gelada durante todo o treino pesado." },
   { id: 3, name: "Camisa Oversized Dry-Fit", category: "Vestuário", price: "79,90", img: "https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=600&q=80", desc: "Tecido respirável de alta performance e máximo conforto." },
   { id: 4, name: "Calça Jogger / Legging Fitness Pro", category: "Vestuário", price: "119,90", img: "https://images.unsplash.com/photo-1506630448388-4e683c67ddb0?auto=format&fit=crop&w=600&q=80", desc: "Flexibilidade total e toque suave para agachamentos perfeitos." },
