@@ -146,6 +146,15 @@
   --sidebar-ring: oklch(0.551 0.027 264.364);
 }
 
+@keyframes pulseGlow {
+  0%, 100% { transform: scale(1); box-shadow: 0 0 0 0 oklch(0.68 0.22 45 / 0.6); }
+  50% { transform: scale(1.05); box-shadow: 0 0 20px 6px oklch(0.68 0.22 45 / 0.8); }
+}
+
+.animate-store-pulse {
+  animation: pulseGlow 2s infinite ease-in-out;
+}
+
 @layer base {
   * {
     border-color: var(--color-border);
