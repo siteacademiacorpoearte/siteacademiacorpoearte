@@ -3,6 +3,7 @@ import { Check, Dumbbell, Music, Clock, MapPin, Star, Users, Instagram, Phone } 
 import React from "react";
 import dance from "@/assets/dance-class.jpg";
 import { Carousel, CarouselContent, CarouselItem, CarouselPrevious, CarouselNext } from "@/components/ui/carousel";
+import Autoplay from "embla-carousel-autoplay";
 
 
 export const Route = createFileRoute("/")({
