@@ -46,8 +46,14 @@ function Index() {
   return (
     <div className="min-h-screen bg-background text-foreground font-body">
       <header className="fixed inset-x-0 top-0 z-50 border-b border-border/50 bg-background/80 backdrop-blur">
-        <div className="mx-auto flex max-w-6xl items-center justify-between px-5 py-4">
-          <a href="#" className="font-display text-2xl tracking-wide">CORPO<span className="text-primary">E</span>ARTE</a>
+        <div className="mx-auto flex max-w-6xl items-center justify-between px-5 py-3">
+          <a href="#" className="flex items-center gap-3">
+            <img src="/uploads/1794117136891-0-images-10-.jpg" alt="Corpo e Arte Logo" className="h-12 w-12 rounded-full object-cover border border-primary/40 shadow-md" />
+            <div className="flex flex-col">
+              <span className="font-display text-xl tracking-wide leading-none">CORPO<span className="text-primary">E</span>ARTE</span>
+              <span className="text-[10px] uppercase font-semibold text-muted-foreground tracking-wider mt-0.5">Academia Fitness</span>
+            </div>
+          </a>
           <nav className="hidden gap-8 text-sm md:flex">
             <a href="#planos" className="hover:text-primary">Planos</a>
             <a href="#modalidades" className="hover:text-primary">Modalidades</a>
@@ -135,7 +141,13 @@ function Index() {
 
       <footer className="border-t border-border py-10">
         <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-4 px-5 text-sm text-muted-foreground md:flex-row">
-          <span className="font-display text-xl text-foreground">CORPO<span className="text-primary">E</span>ARTE</span>
+          <div className="flex items-center gap-3">
+            <img src="/uploads/1794117136891-0-images-10-.jpg" alt="Corpo e Arte Logo" className="h-10 w-10 rounded-full object-cover border border-primary/30" />
+            <div className="flex flex-col">
+              <span className="font-display text-lg text-foreground leading-none">CORPO<span className="text-primary">E</span>ARTE</span>
+              <span className="text-[9px] uppercase font-semibold text-muted-foreground tracking-wider mt-0.5">Academia Fitness</span>
+            </div>
+          </div>
           <div className="flex gap-6"><span className="flex items-center gap-2"><Phone className="h-4 w-4" />(00) 0000-0000</span><span className="flex items-center gap-2"><Instagram className="h-4 w-4" />@corpoearte</span></div>
           <span>© 2026 CorpoeArte Academia</span>
         </div>
