@@ -88,7 +88,7 @@ function Index() {
             <a href="#modalidades" className="hover:text-primary">Modalidades</a>
           </nav>
           <div className="flex items-center gap-3">
-            <a href="#loja" className="hidden text-sm font-medium hover:text-primary md:inline-block">Nossa Loja</a>
+            <a href="#loja" className="relative hidden text-sm font-semibold text-primary md:inline-block px-3 py-1 rounded-full border border-primary/60 bg-primary/10 animate-store-pulse shadow-[0_0_15px_rgba(255,100,50,0.4)]">Nossa Loja ✨</a>
             <a href="#planos" className="rounded-full bg-primary px-5 py-2 text-sm font-semibold text-primary-foreground shadow-md hover:opacity-90">Matricule-se</a>
           </div>
         </div>
