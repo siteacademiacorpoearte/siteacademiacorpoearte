@@ -79,7 +79,7 @@ function Index() {
         <div className="absolute inset-0 w-full h-full">
           <Carousel opts={{ loop: true }} className="w-full h-full">
             <CarouselContent className="h-[90vh] ml-0">
-              {proAthletes.map((athlete, index) => (
+              {proAthletes.slice(0, 8).map((athlete, index) => (
                 <CarouselItem key={index} className="relative h-full w-full pl-0">
                   <img src={athlete.img} alt={athlete.name} className="absolute inset-0 h-full w-full object-cover" />
                   <div className="absolute inset-0 bg-gradient-to-t from-background via-background/60 to-transparent" />
