@@ -56,6 +56,21 @@ const units = [
   { n: "CorpoeArte Norte", a: "Rua do Sol, 45 — Zona Norte" },
 ];
 
+const storeProducts = [
+  { id: 1, name: "Whey Protein Isolado 900g", category: "Suplemento", price: "149,90", img: "https://images.unsplash.com/photo-1579722820308-d74e57170ca9?auto=format&fit=crop&w=600&q=80", desc: "Proteína de alta pureza para ganho de massa muscular e recuperação." },
+  { id: 2, name: "Squeeze Térmico Aço Inox 750ml", category: "Acessório", price: "59,90", img: "https://images.unsplash.com/photo-1602143407151-7111542de6e8?auto=format&fit=crop&w=600&q=80", desc: "Mantém sua água gelada durante todo o treino pesado." },
+  { id: 3, name: "Camisa Oversized Dry-Fit", category: "Vestuário", price: "79,90", img: "https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=600&q=80", desc: "Tecido respirável de alta performance e máximo conforto." },
+  { id: 4, name: "Calça Jogger / Legging Fitness Pro", category: "Vestuário", price: "119,90", img: "https://images.unsplash.com/photo-1506630448388-4e683c67ddb0?auto=format&fit=crop&w=600&q=80", desc: "Flexibilidade total e toque suave para agachamentos perfeitos." },
+  { id: 5, name: "Tênis de Treino Cross-Lift", category: "Calçado", price: "299,90", img: "https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=600&q=80", desc: "Solado plano e estabilidade extrema para musculação e levantamento." },
+  { id: 6, name: "Luva de Musculação com Munhequeira", category: "Acessório", price: "49,90", img: "https://images.unsplash.com/photo-1584735935682-2f2b69dff9d2?auto=format&fit=crop&w=600&q=80", desc: "Proteção avançada para as mãos e firmeza na pegada da barra." },
+  { id: 7, name: "Corda de Pular de Alta Velocidade", category: "Cardio", price: "39,90", img: "https://images.unsplash.com/photo-1517838277536-f5f99be501cd?auto=format&fit=crop&w=600&q=80", desc: "Rolamento blindado para saltos rápidos e treino aeróbico eficiente." },
+  { id: 8, name: "Kit Elásticos Extensores / Pilates", category: "Acessório", price: "69,90", img: "https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&w=600&q=80", desc: "Diferentes níveis de resistência para treinos funcionais e em casa." },
+  { id: 9, name: "Shorts de Compressão Masculino/Feminino", category: "Vestuário", price: "69,90", img: "https://images.unsplash.com/photo-1519315901367-f34ff9154487?auto=format&fit=crop&w=600&q=80", desc: "Sustentação muscular e liberdade de movimento impecável." },
+  { id: 10, name: "Smartwatch Esportivo Fitness Tracker", category: "Tecnologia", price: "199,90", img: "https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=600&q=80", desc: "Monitoramento cardíaco, passos, calorias e modos de treino." },
+  { id: 11, name: "Creatina Monohidratada 300g", category: "Suplemento", price: "89,90", img: "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&w=600&q=80", desc: "Aumento de força, explosão muscular e volumização celular." },
+  { id: 12, name: "Coqueteleira 3 Compartimentos", category: "Acessório", price: "34,90", img: "https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&w=600&q=80", desc: "Praticidade para levar seu pré-treino, pós-treino e cápsulas." }
+];
+
 function Index() {
   return (
     <div className="min-h-screen bg-background text-foreground font-body">
@@ -71,9 +86,10 @@ function Index() {
           <nav className="hidden gap-8 text-sm md:flex">
             <a href="#planos" className="hover:text-primary">Planos</a>
             <a href="#modalidades" className="hover:text-primary">Modalidades</a>
+            <a href="#loja" className="hover:text-primary">Nossa Loja</a>
           </nav>
           <div className="flex items-center gap-3">
-            <a href="#unidades" className="relative group rounded-full border border-primary/60 bg-primary/10 px-4 py-2 text-sm font-semibold text-primary transition-all hover:bg-primary/20 shadow-[0_0_15px_rgba(239,68,68,0.2)] flex items-center gap-1.5">
+            <a href="#loja" className="relative group rounded-full border border-primary/60 bg-primary/10 px-4 py-2 text-sm font-semibold text-primary transition-all hover:bg-primary/20 shadow-[0_0_15px_rgba(239,68,68,0.2)] flex items-center gap-1.5">
               <span className="absolute -top-1 -right-1 flex h-2.5 w-2.5">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
                 <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-primary"></span>
@@ -157,6 +173,40 @@ function Index() {
               ))}
             </div>
           </div>
+        </div>
+      </section>
+
+      <section id="loja" className="mx-auto max-w-6xl px-5 py-24">
+        <div className="text-center">
+          <span className="inline-block rounded-full bg-primary/20 px-3 py-1 text-xs font-semibold text-primary mb-3">EQUIPAMENTOS & SUPLEMENTOS</span>
+          <h2 className="font-display text-5xl">NOSSA <span className="text-primary">LOJA</span></h2>
+          <p className="mt-3 max-w-xl mx-auto text-muted-foreground">
+            Tudo o que você precisa para elevar o nível dos seus treinos de musculação, performance e recuperação.
+          </p>
+        </div>
+
+        <div className="mt-12 grid gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+          {storeProducts.map((prod) => (
+            <div key={prod.id} className="group relative flex flex-col overflow-hidden rounded-2xl border border-border bg-card shadow-md transition-all hover:border-primary/50">
+              <div className="aspect-square overflow-hidden bg-secondary">
+                <img src={prod.img} alt={prod.name} loading="lazy" className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" />
+              </div>
+              <div className="flex flex-1 flex-col p-5">
+                <span className="text-[11px] font-semibold text-primary uppercase tracking-wider mb-1">{prod.category}</span>
+                <h3 className="font-semibold text-foreground text-base leading-tight line-clamp-1">{prod.name}</h3>
+                <p className="mt-2 text-xs text-muted-foreground line-clamp-2 flex-1">{prod.desc}</p>
+                <div className="mt-4 flex items-center justify-between pt-3 border-t border-border/60">
+                  <div>
+                    <span className="text-[10px] text-muted-foreground block">Preço</span>
+                    <span className="font-display text-xl text-primary">R$ {prod.price}</span>
+                  </div>
+                  <button onClick={() => alert(`Produto "${prod.name}" adicionado ao carrinho! Dirija-se à recepção da academia para retirar.`)} className="rounded-full bg-primary px-4 py-2 text-xs font-semibold text-primary-foreground shadow transition-opacity hover:opacity-90">
+                    Comprar
+                  </button>
+                </div>
+              </div>
+            </div>
+          ))}
         </div>
       </section>
 
