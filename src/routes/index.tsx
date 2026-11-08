@@ -86,9 +86,9 @@ function Index() {
           <nav className="hidden gap-8 text-sm md:flex">
             <a href="#planos" className="hover:text-primary">Planos</a>
             <a href="#modalidades" className="hover:text-primary">Modalidades</a>
-            <a href="#loja" className="hover:text-primary">Nossa Loja</a>
           </nav>
           <div className="flex items-center gap-3">
+            <a href="#loja" className="hidden text-sm font-medium hover:text-primary md:inline-block">Nossa Loja</a>
             <a href="#planos" className="rounded-full bg-primary px-5 py-2 text-sm font-semibold text-primary-foreground shadow-md hover:opacity-90">Matricule-se</a>
           </div>
         </div>
