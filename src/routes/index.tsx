@@ -68,7 +68,7 @@ const storeProducts = [
   { id: 9, name: "Shorts de Compressão Masculino/Feminino", category: "Vestuário", price: "69,90", img: "https://images.unsplash.com/photo-1519315901367-f34ff9154487?auto=format&fit=crop&w=600&q=80", desc: "Sustentação muscular e liberdade de movimento impecável." },
   { id: 10, name: "Smartwatch Esportivo Fitness Tracker", category: "Tecnologia", price: "199,90", img: "/uploads/1794119605730-0-images-15-.jpg", desc: "Monitoramento cardíaco, passos, calorias e modos de treino." },
   { id: 11, name: "Creatina Monohidratada 300g", category: "Suplemento", price: "89,90", img: "/uploads/1794119508832-0-images-14-.jpg", desc: "Aumento de força, explosão muscular e volumização celular." },
-  { id: 12, name: "Coqueteleira 3 Compartimentos", category: "Acessório", price: "34,90", img: "https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&w=600&q=80", desc: "Praticidade para levar seu pré-treino, pós-treino e cápsulas." }
+  { id: 12, name: "Coqueteleira 3 Compartimentos", category: "Acessório", price: "34,90", img: "/uploads/1794119675670-0-607a500737e186f8a7356167ff9dc081-50e436050f914d21ad17806869628958-1024-1024.png", desc: "Praticidade para levar seu pré-treino, pós-treino e cápsulas." }
 ];
 
 function Index() {
