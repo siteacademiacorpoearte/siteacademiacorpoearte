@@ -36,6 +36,17 @@ const reviews = [
   { n: "Camila Reis", u: "Unidade Centro", t: "Melhor custo-benefício da cidade, sem fidelidade nenhuma." },
 ];
 
+const proAthletes = [
+  { name: "Carlos Mendes", role: "Atleta de Fisiculturismo", desc: "Treino de hipertrofia e definição avançada", img: "https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?auto=format&fit=crop&w=600&q=80" },
+  { name: "Juliana Silveira", role: "Professora de Dança", desc: "Ritmos e zumba com muita energia", img: "https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&w=600&q=80" },
+  { name: "Bruno Lima", role: "Especialista em Levantamento de Peso", desc: "Força bruta e técnica de levantamento olímpico", img: "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=600&q=80" },
+  { name: "Fernanda Costa", role: "Instrutora de Ciclismo Indoor", desc: "Resistência cardiorrespiratória e alta performance", img: "https://images.unsplash.com/photo-1517649763962-0c623066013b?auto=format&fit=crop&w=600&q=80" },
+  { name: "Marcos Vinícius", role: "Coach de Fisiculturismo", desc: "Preparação de campeonatos e poses", img: "https://images.unsplash.com/photo-1574680096145-d05b474e2155?auto=format&fit=crop&w=600&q=80" },
+  { name: "Patrícia Dias", role: "Personal de Musculação", desc: "Musculação focada em resultados rápidos", img: "https://images.unsplash.com/photo-1541534741688-6078c6bfb5c5?auto=format&fit=crop&w=600&q=80" },
+  { name: "Lucas Gabriel", role: "Atleta de Powerlifting", desc: "Levantamento de peso básico e progressão de carga", img: "https://images.unsplash.com/photo-1566241142559-40e1dab266c6?auto=format&fit=crop&w=600&q=80" },
+  { name: "Beatriz Ramos", role: "Professora de Dança & Ginástica", desc: "Expressão corporal, jazz e aeróbica", img: "https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?auto=format&fit=crop&w=600&q=80" },
+];
+
 const units = [
   { n: "CorpoeArte Centro", a: "Rua das Flores, 120 — Centro" },
   { n: "CorpoeArte Jardins", a: "Av. Brasil, 850 — Jardins" },
@@ -48,7 +59,7 @@ function Index() {
       <header className="fixed inset-x-0 top-0 z-50 border-b border-border/50 bg-background/80 backdrop-blur">
         <div className="mx-auto flex max-w-6xl items-center justify-between px-5 py-3">
           <a href="#" className="flex items-center gap-3">
-            <img src="/uploads/1794117136891-0-images-10-.jpg" alt="Corpo e Arte Logo" className="h-36 w-36 rounded-full object-cover border border-primary/40 shadow-md" />
+            <img src="/uploads/1794117136891-0-images-10-.jpg" alt="Corpo e Arte Logo" className="h-18 w-18 rounded-full object-cover border border-primary/40 shadow-md" />
             <div className="flex flex-col">
               <span className="font-display text-xl tracking-wide leading-none">CORPO<span className="text-primary">E</span>ARTE</span>
               <span className="text-[10px] uppercase font-semibold text-muted-foreground tracking-wider mt-0.5">Academia Fitness</span>
@@ -123,6 +134,33 @@ function Index() {
         </div>
       </section>
 
+      <section className="bg-secondary/50 py-24 border-y border-border">
+        <div className="mx-auto max-w-6xl px-5">
+          <div className="flex flex-col md:flex-row md:items-end justify-between mb-12">
+            <div>
+              <p className="text-sm font-semibold uppercase tracking-[0.2em] text-primary mb-2">Galeria Randômica</p>
+              <h2 className="font-display text-5xl">PROFISSIONAIS <span className="text-primary">& ATLETAS</span></h2>
+            </div>
+            <p className="text-sm text-muted-foreground max-w-sm mt-4 md:mt-0">Conheça nossos especialistas em fisiculturismo, musculação, ciclismo, levantamento de peso e dança.</p>
+          </div>
+          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+            {[...proAthletes].sort(() => Math.random() - 0.5).map((p, idx) => (
+              <div key={idx} className="group relative overflow-hidden rounded-2xl border border-border bg-card shadow-md transition-all hover:border-primary/50">
+                <div className="aspect-[4/5] overflow-hidden">
+                  <img src={p.img} alt={p.name} loading="lazy" className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" />
+                </div>
+                <div className="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-transparent opacity-90" />
+                <div className="absolute bottom-0 p-5 w-full">
+                  <span className="inline-block rounded-full bg-primary/20 px-2.5 py-1 text-[11px] font-semibold text-primary mb-2">{p.role}</span>
+                  <h3 className="font-display text-2xl leading-none text-foreground">{p.name}</h3>
+                  <p className="mt-1 text-xs text-muted-foreground line-clamp-2">{p.desc}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <section id="unidades" className="border-t border-border py-24">
         <div className="mx-auto max-w-6xl px-5">
           <h2 className="font-display text-5xl">NOSSAS <span className="text-primary">UNIDADES</span></h2>
@@ -142,7 +180,7 @@ function Index() {
       <footer className="border-t border-border py-10">
         <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-4 px-5 text-sm text-muted-foreground md:flex-row">
           <div className="flex items-center gap-3">
-            <img src="/uploads/1794117136891-0-images-10-.jpg" alt="Corpo e Arte Logo" className="h-30 w-30 rounded-full object-cover border border-primary/30" />
+            <img src="/uploads/1794117136891-0-images-10-.jpg" alt="Corpo e Arte Logo" className="h-15 w-15 rounded-full object-cover border border-primary/30" />
             <div className="flex flex-col">
               <span className="font-display text-lg text-foreground leading-none">CORPO<span className="text-primary">E</span>ARTE</span>
               <span className="text-[9px] uppercase font-semibold text-muted-foreground tracking-wider mt-0.5">Academia Fitness</span>
