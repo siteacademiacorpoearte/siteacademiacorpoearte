@@ -1,7 +1,8 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Check, Dumbbell, Music, Clock, MapPin, Star, Users, Instagram, Phone } from "lucide-react";
-import hero from "@/assets/hero-gym.jpg";
+import React from "react";
 import dance from "@/assets/dance-class.jpg";
+import { Carousel, CarouselContent, CarouselItem, CarouselPrevious, CarouselNext } from "@/components/ui/carousel";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -74,14 +75,43 @@ function Index() {
         </div>
       </header>
 
-      <section className="relative flex min-h-[90vh] items-end overflow-hidden">
-        <img src={hero} alt="Aluna treinando com cordas na academia" width={1600} height={912} className="absolute inset-0 h-full w-full object-cover" />
-        <div className="absolute inset-0 bg-gradient-to-t from-background via-background/60 to-transparent" />
-        <div className="relative mx-auto w-full max-w-6xl px-5 pb-20">
-          <p className="mb-3 text-sm font-semibold uppercase tracking-[0.3em] text-primary">Academia sem fidelidade</p>
-          <h1 className="font-display text-6xl leading-none md:text-8xl">TREINE<br />DO SEU <span className="text-primary">JEITO</span></h1>
-          <p className="mt-5 max-w-md text-lg text-muted-foreground">Musculação, dança e ginástica a partir de R$ 89,90 por mês. Sem anuidade, sem complicação.</p>
-          <a href="#planos" className="mt-8 inline-block rounded-full bg-primary px-8 py-4 font-semibold text-primary-foreground">Ver planos</a>
+      <section className="relative flex min-h-[90vh] items-center overflow-hidden">
+        <div className="absolute inset-0 w-full h-full">
+          <Carousel opts={{ loop: true }} className="w-full h-full">
+            <CarouselContent className="h-[90vh] ml-0">
+              {proAthletes.map((athlete, index) => (
+                <CarouselItem key={index} className="relative h-full w-full pl-0">
+                  <img src={athlete.img} alt={athlete.name} className="absolute inset-0 h-full w-full object-cover" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-background via-background/60 to-transparent" />
+                  <div className="absolute bottom-0 inset-x-0">
+                    <div className="mx-auto w-full max-w-6xl px-5 pb-20">
+                      <span className="inline-block rounded-full bg-primary/20 px-3 py-1 text-xs font-semibold text-primary mb-3 backdrop-blur-md">
+                        {athlete.role}
+                      </span>
+                      <h1 className="font-display text-6xl leading-none md:text-8xl">
+                        {athlete.name}
+                      </h1>
+                      <p className="mt-3 max-w-md text-lg text-muted-foreground">
+                        {athlete.desc}
+                      </p>
+                      <div className="mt-6 flex items-center gap-4">
+                        <a href="#planos" className="inline-block rounded-full bg-primary px-8 py-4 font-semibold text-primary-foreground">
+                          Ver planos
+                        </a>
+                        <a href="#modalidades" className="inline-block rounded-full border border-border bg-card/60 backdrop-blur px-8 py-4 font-semibold text-foreground hover:border-primary">
+                          Nossas modalidades
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <div className="hidden md:block">
+              <CarouselPrevious className="left-6 bg-background/80 hover:bg-background text-foreground border-border" />
+              <CarouselNext className="right-6 bg-background/80 hover:bg-background text-foreground border-border" />
+            </div>
+          </Carousel>
         </div>
       </section>
 
