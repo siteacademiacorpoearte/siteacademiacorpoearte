@@ -67,7 +67,7 @@ const storeProducts = [
   { id: 8, name: "Kit Elásticos Extensores / Pilates", category: "Acessório", price: "69,90", img: "https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&w=600&q=80", desc: "Diferentes níveis de resistência para treinos funcionais e em casa." },
   { id: 9, name: "Shorts de Compressão Masculino/Feminino", category: "Vestuário", price: "69,90", img: "https://images.unsplash.com/photo-1519315901367-f34ff9154487?auto=format&fit=crop&w=600&q=80", desc: "Sustentação muscular e liberdade de movimento impecável." },
   { id: 10, name: "Smartwatch Esportivo Fitness Tracker", category: "Tecnologia", price: "199,90", img: "https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=600&q=80", desc: "Monitoramento cardíaco, passos, calorias e modos de treino." },
-  { id: 11, name: "Creatina Monohidratada 300g", category: "Suplemento", price: "89,90", img: "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&w=600&q=80", desc: "Aumento de força, explosão muscular e volumização celular." },
+  { id: 11, name: "Creatina Monohidratada 300g", category: "Suplemento", price: "89,90", img: "/uploads/1794119508832-0-images-14-.jpg", desc: "Aumento de força, explosão muscular e volumização celular." },
   { id: 12, name: "Coqueteleira 3 Compartimentos", category: "Acessório", price: "34,90", img: "https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&w=600&q=80", desc: "Praticidade para levar seu pré-treino, pós-treino e cápsulas." }
 ];
 
