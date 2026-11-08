@@ -4,6 +4,7 @@ import React from "react";
 import dance from "@/assets/dance-class.jpg";
 import { Carousel, CarouselContent, CarouselItem, CarouselPrevious, CarouselNext } from "@/components/ui/carousel";
 
+
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
@@ -77,7 +78,7 @@ function Index() {
 
       <section className="relative flex min-h-[90vh] items-center overflow-hidden">
         <div className="absolute inset-0 w-full h-full">
-          <Carousel opts={{ loop: true }} className="w-full h-full">
+          <Carousel opts={{ loop: true }} plugins={[Autoplay({ delay: 5000, stopOnInteraction: false })]} className="w-full h-full">
             <CarouselContent className="h-[90vh] ml-0">
               {proAthletes.slice(0, 8).map((athlete, index) => (
                 <CarouselItem key={index} className="relative h-full w-full pl-0">
@@ -115,21 +116,21 @@ function Index() {
         </div>
       </section>
 
-      <section id="planos" className="mx-auto max-w-6xl px-5 py-24">
+      <section id="planos" className="mx-auto max-w-6xl px-5 py-24 text-center">
         <h2 className="font-display text-5xl">CONHEÇA NOSSOS <span className="text-primary">PLANOS</span></h2>
-        <p className="mt-3 max-w-xl text-muted-foreground">Compare e escolha o plano com o melhor custo-benefício para os seus objetivos.</p>
+        <p className="mt-3 max-w-xl mx-auto text-muted-foreground">Compare e escolha o plano com o melhor custo-benefício para os seus objetivos.</p>
         <div className="mt-12 grid gap-6 md:grid-cols-3">
           {plans.map((p) => (
-            <div key={p.name} className={`flex flex-col rounded-2xl border p-8 ${p.featured ? "border-primary bg-card shadow-[var(--shadow-glow)]" : "border-border bg-card"}`}>
+            <div key={p.name} className={`flex flex-col items-center text-center rounded-2xl border p-8 ${p.featured ? "border-primary bg-card shadow-[var(--shadow-glow)]" : "border-border bg-card"}`}>
               {p.featured && <span className="mb-4 w-fit rounded-full bg-primary px-3 py-1 text-xs font-bold text-primary-foreground">MAIS ESCOLHIDO</span>}
               <h3 className="font-display text-3xl">{p.name}</h3>
               <p className="mt-4 text-sm text-muted-foreground">A partir de</p>
               <p className="font-display text-5xl text-primary">R$ {p.price}</p>
               <p className="text-sm text-muted-foreground">{p.note}</p>
-              <ul className="my-8 flex-1 space-y-3 text-sm">
-                {p.items.map((i) => <li key={i} className="flex gap-2"><Check className="h-4 w-4 shrink-0 text-primary" />{i}</li>)}
+              <ul className="my-8 flex-1 space-y-3 text-sm w-full">
+                {p.items.map((i) => <li key={i} className="flex items-center justify-center gap-2"><Check className="h-4 w-4 shrink-0 text-primary" />{i}</li>)}
               </ul>
-              <a href="#unidades" className={`rounded-full py-3 text-center font-semibold ${p.featured ? "bg-primary text-primary-foreground" : "border border-border hover:border-primary"}`}>Matricule-se!</a>
+              <a href="#unidades" className={`w-full rounded-full py-3 text-center font-semibold ${p.featured ? "bg-primary text-primary-foreground" : "border border-border hover:border-primary"}`}>Matricule-se!</a>
             </div>
           ))}
         </div>
