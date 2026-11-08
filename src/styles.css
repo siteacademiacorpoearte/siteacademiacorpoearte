@@ -151,6 +151,16 @@
     border-color: var(--color-border);
   }
 
+  #lovable-badge,
+  [data-lovable-badge],
+  div[style*="z-index: 99999"],
+  a[href*="lovable.dev"] {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+  }
+
   body {
     background-color: var(--color-background);
     color: var(--color-foreground);
