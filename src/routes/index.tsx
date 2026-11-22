@@ -269,7 +269,7 @@ function Index() {
               <span className="text-[9px] uppercase font-semibold text-muted-foreground tracking-wider mt-0.5">Academia Fitness</span>
             </div>
           </div>
-          <div className="flex gap-6"><span className="flex items-center gap-2"><Phone className="h-4 w-4" />(00) 0000-0000</span><span className="flex items-center gap-2"><Instagram className="h-4 w-4" />@corpoearte</span></div>
+          <div className="flex gap-6"><span className="flex items-center gap-2"><Phone className="h-4 w-4" />71 98827-2675</span><span className="flex items-center gap-2"><Instagram className="h-4 w-4" />@corpoearte</span></div>
           <span>© 2026 CorpoeArte Academia</span>
         </div>
       </footer>
