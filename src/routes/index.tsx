@@ -88,7 +88,7 @@ function Index() {
             <a href="#modalidades" className="hover:text-primary">Modalidades</a>
           </nav>
           <div className="flex flex-col items-end gap-1.5 md:flex-row md:items-center md:gap-3">
-            <a href="#planos" className="rounded-full bg-primary px-4 py-1.5 md:px-5 md:py-2 text-xs md:text-sm font-semibold text-primary-foreground shadow-md hover:opacity-90">Matricule-se</a>
+            <a href="https://wa.me/5571988272675?text=Ol%C3%A1%2C%20gostaria%20de%20me%20matricular%20na%20CorpoeArte%20Academia!" target="_blank" rel="noopener noreferrer" className="rounded-full bg-primary px-4 py-1.5 md:px-5 md:py-2 text-xs md:text-sm font-semibold text-primary-foreground shadow-md hover:opacity-90">Matricule-se</a>
             <a href="#loja" className="relative text-xs md:text-sm font-semibold text-primary px-3 py-1 rounded-full border border-primary/60 bg-primary/10 animate-store-pulse shadow-[0_0_15px_rgba(255,100,50,0.4)]">Nossa Loja ✨</a>
           </div>
         </div>
@@ -148,7 +148,7 @@ function Index() {
               <ul className="my-8 flex-1 space-y-3 text-sm w-full">
                 {p.items.map((i) => <li key={i} className="flex items-center justify-center gap-2"><Check className="h-4 w-4 shrink-0 text-primary" />{i}</li>)}
               </ul>
-              <a href="#unidades" className={`w-full rounded-full py-3 text-center font-semibold ${p.featured ? "bg-primary text-primary-foreground" : "border border-border hover:border-primary"}`}>Matricule-se!</a>
+              <a href="https://wa.me/5571988272675?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20sobre%20o%20" target="_blank" rel="noopener noreferrer" className={`w-full rounded-full py-3 text-center font-semibold inline-block ${p.featured ? "bg-primary text-primary-foreground" : "border border-border hover:border-primary"}`}>Matricule-se!</a>
             </div>
           ))}
         </div>
@@ -253,7 +253,7 @@ function Index() {
                 <MapPin className="mb-3 h-6 w-6 text-primary" />
                 <h3 className="font-semibold">{u.n}</h3>
                 <p className="text-sm text-muted-foreground">{u.a}</p>
-                <a href="#planos" className="mt-4 inline-block text-sm font-semibold text-primary">Matricular nesta unidade →</a>
+                <a href="https://wa.me/5571988272675?text=Ol%C3%A1%2C%20gostaria%20de%20me%20matricular%20na%20unidade%20" target="_blank" rel="noopener noreferrer" className="mt-4 inline-block text-sm font-semibold text-primary">Matricular nesta unidade →</a>
               </div>
             ))}
           </div>
